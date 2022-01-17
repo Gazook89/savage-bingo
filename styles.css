@@ -1,0 +1,51 @@
+body {
+    background: #222;
+    color: #DDD;
+    font-size: 12px;
+    text-align: center;
+}
+
+h1 {
+    text-decoration: underline;
+    font-family: 'Josefin Sans';
+    font-variant: small-caps;
+}
+
+#bingo-card {  
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 2px 2px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center stretch;
+    justify-items: center stretch;
+    grid-template-areas:
+      ". . . . ."
+      ". . . . ."
+      ". . free . ."
+      ". . . . ."
+      ". . . . .";
+    padding: 10px;
+    font-family: 'josefin sans'
+  }
+  
+  .square {
+      background: #555;
+      padding: 10px;
+      margin: 2px;
+      text-align: center;
+  }
+
+  .square h1 {
+      font-size: 1.2em;
+  }
+
+  .square p:first-of-type {
+      font-style: italic;
+      font-weight: 100;
+  }
+
+  .free-square {
+      grid-area: free;
+  }
