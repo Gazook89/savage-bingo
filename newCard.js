@@ -4,7 +4,7 @@ class Square {
     constructor(title, description, rule, book, page){
         this.title = title;
         this.description = description;
-        this.rule = rule;
+        this.rule = rule || undefined;
         this.book = book;
         this.page = page;
     }
@@ -18,7 +18,7 @@ class Square {
         return [
             `<h1>${this.title}</h1>`,
             `<div class='desc'>${this.description}</div>`,
-            this.rule ? `<div class='rule'>${this.rule}</div>` : null,
+            this.rule != undefined ? `<div class='rule'>${this.rule}</div>` : null,
             `<div class='reference'>${this.book} | ${this.page}</div>`
         ].join('\n')
     }
@@ -60,7 +60,7 @@ export function newCard(){
 export function loadCard() {
     let squares = JSON.parse(localStorage.getItem('sub-set'));
     for(let x=0;x<24;x++){
-            const square = new Square(squares[x].name, squares[x].desc, squares[x].rule);
+            const square = new Square(squares[x].name, squares[x].desc, squares[x].rule, squares[x].book, squares[x].page);
             square.render();
         };
     freeSquare();
