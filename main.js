@@ -1,43 +1,29 @@
-import squares from './squares.js';
+import { newCard, loadCard, resetCard } from './newCard.js';
+import { importJSON } from './import.js';
 
-class Square {
-    constructor(title, description, rule){
-        this.title = title;
-        this.description = description;
-        this.rule = rule;
-    }
-    
-    mark(){
-        console.log('mark');
-    }
+document.getElementById('new').addEventListener('click', newCard);  // todo: this is returning "true" and thus looking for json.imported-bingo-card which doesnt exist.
+document.getElementById('reset').addEventListener('click', resetCard);
+document.getElementById('import').addEventListener('click', importJSON);
+[newCard, showImportedFileName].forEach(func=>{document.getElementById('import').addEventListener('change', func)}) ;
 
-    template(){
-        return [
-            `<h1>${this.title}</h1>`,
-            `<p>${this.description}</p>`,
-            `<p>${this.rule}</p>`
-        ].join('\n')
-    }
+if(localStorage.length){
+    loadCard();
+    showImportedFileName();
+} else {
+    newCard();
+}
 
-    render(){
-        const newSquare = Object.assign(document.createElement('div'), {className: 'square'});
-        newSquare.innerHTML = this.template();
-        document.querySelector('#bingo-card').append(newSquare);
+function showImportedFileName() {
+    if(localStorage.getItem('imported-file-name') != null){
+        const msg = 'Loaded: ' + localStorage.getItem('imported-file-name');
+        if(document.getElementById('filename')){
+            document.getElementById('filename').textContent = msg;
+        } else {
+            const filename = Object.assign(document.createElement('li'), {id: 'filename'});
+            filename.textContent = msg;
+            document.getElementById('options').append(filename);
+        }
     }
 }
 
-for(let x=0;x<24;x++){
-    const rand = Math.floor(Math.random()*squares.length);
-    const square = new Square(squares[rand].name, squares[rand].desc, squares[rand].rule);
-    square.render();
-}
-
-const freeSquare = Object.assign(document.createElement('div'), {className: 'square free-square'});
-freeSquare.innerHTML = `<h1>Free</h1>`;
-document.querySelector('#bingo-card').append(freeSquare);
-
-// squares.forEach(item => {
-//     const square = new Square(item.name, item.desc, item.rule);
-//     square.render();
-// });
 

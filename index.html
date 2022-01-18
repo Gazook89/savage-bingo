@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang='en'>
-   <head>
+    <head>
         <meta charset='utf-8'>
         <meta name='description' content='Diversify your Encounters'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap" rel="stylesheet"> 
         <link rel='stylesheet' href='styles.css'>
-        <!-- <script type='module' src='squares.json'></script> -->
-        <script type='module' src='main.js'></script>
+        <script type='module' src='main.js' defer></script>
+        <script type='module' src='import.js' defer></script>
         <title>Savage Bingo</title>
-   </head>
-   <body>
-       <main>
+    </head>
+    <body>
+        <main>
             <h1>Savage Bingo</h1>
+            <ul id='options'>
+                <li id='new'>New</li>
+                <li id='reset'>Reset</li>
+                <li><label>Import JSON<input type='file' id='import' accept='.json'  style='display:none;' /></label></li>
+            </ul>
             <div id='bingo-card'>
             </div>
-       </main>
-       <footer>
-
-       </footer>
+        </main>
+        <footer>
+            <ul>
+                <li>Savage Bingo by Gazook89</li>
+                <li>©2022</li>
+                <li><a title='Go to License' href='https://github.com/Gazook89/savage-bingo/blob/main/LICENSE'>GPL-3.0 License</a></li>
+                <li><a title='Github' href='https://github.com/Gazook89/savage-bingo'>GitHub</a></li>
+                <li><a title='Donate via Ko-fi' href='https://ko-fi.com/johnj'>Tip Jar</a></li>
+            </ul>
+        </footer>
        
-   </body>
+    </body>
 </html
