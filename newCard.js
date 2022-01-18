@@ -1,10 +1,12 @@
 import defaultSquares from './squares.js'
 
 class Square {
-    constructor(title, description, rule){
+    constructor(title, description, rule, book, page){
         this.title = title;
         this.description = description;
         this.rule = rule;
+        this.book = book;
+        this.page = page;
     }
     
     mark(evt){
@@ -12,10 +14,12 @@ class Square {
     }
 
     template(){
+
         return [
             `<h1>${this.title}</h1>`,
-            `<p>${this.description}</p>`,
-            `<p>${this.rule}</p>`
+            `<div class='desc'>${this.description}</div>`,
+            this.rule ? `<div class='rule'>${this.rule}</div>` : null,
+            `<div class='reference'>${this.book} | ${this.page}</div>`
         ].join('\n')
     }
 
@@ -43,7 +47,7 @@ export function newCard(){
 
     for(let x=0;x<24;x++){
         const rand = Math.floor(Math.random()*availableSquares.length);
-        const square = new Square(availableSquares[rand].name, availableSquares[rand].desc, availableSquares[rand].rule);
+        const square = new Square(availableSquares[rand].name, availableSquares[rand].desc, availableSquares[rand].rule, availableSquares[rand].book, availableSquares[rand].page);
         squareList.push(availableSquares[rand]);
         square.render();
     }

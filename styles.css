@@ -35,15 +35,35 @@ h1 {
     padding: 10px;
     margin: 2px;
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.square * {
+    flex: 1 0 100%;
 }
 
 .square h1 {
     font-size: 1.2em;
 }
 
-.square p:first-of-type {
+.square .desc {
     font-style: italic;
-    font-weight: 100;
+    font-weight: 300;
+    opacity: 0;
+    cursor:default;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.square .reference {
+    align-self: end;
+    margin-top: 1.3em;
+    color: #AAA
 }
 
 .free-square {
@@ -52,6 +72,16 @@ h1 {
 
 .square.marked {
     background-color: rgb(252, 165, 52);
+    color: #222;
+}
+
+.square.marked .desc {
+    opacity: 1;
+    transition: all 1s .5s ease-in;
+}
+
+.square.marked .reference {
+    visibility: hidden;
 }
 
 /* options */
