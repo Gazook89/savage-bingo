@@ -203,6 +203,167 @@ const defaultSquares = [
         "desc" : "",
         "book" : "SWADE Core",
         "page" : 102
+    },
+    {
+        "name" : "Interrupt From Hold",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Low Light",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Improvised Weapon - Light",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Improvised Weapon - Medium",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Improvised Weapon - Heavy",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Miss Innocent Bystanders",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 102
+    },
+    {
+        "name" : "Mounted Attack",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 103
+    },
+    {
+        "name" : "Mounted Charge",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 103
+    },
+    {
+        "name" : "Set Pikes",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 103
+    },
+    {
+        "name" : "Multi-Action",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 103
+    },
+    {
+        "name" : "Natural Weapon - Bite",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Natural Weapon - Claws",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Natural Weapon - Horns",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Nonlethal Attack",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Off-Hand Attack",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Go Prone",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Push",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Push for the Kill",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Point Blank",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 104
+    },
+    {
+        "name" : "Ready Weapon",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 105
+    },
+    {
+        "name" : "Reload",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 105
+    },
+    {
+        "name" : "Attack Size Up",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 106
+    },
+    {
+        "name" : "Attack Size Down",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 106
     }
 ];
 
