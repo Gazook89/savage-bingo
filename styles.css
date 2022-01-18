@@ -28,24 +28,37 @@ h1 {
       ". . . . .";
     padding: 10px;
     font-family: 'josefin sans'
-  }
+}
   
-.square {
+.square {  
     background: #555;
     padding: 10px;
     margin: 2px;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: repeat(3, 1fr); 
+    gap: 2px 2px; 
+    grid-template-areas: 
+        "header"
+        "body"
+        "reference"; 
+    justify-content: center; 
+    justify-items: center; 
+    align-items: center; 
 }
+  
+
 
 .square * {
     flex: 1 0 100%;
 }
 
 .square h1 {
-    font-size: 1.2em;
+    font-size: 1.2em;  
+    align-self: start;
+    grid-area: header;
 }
 
 .square .desc {
@@ -58,12 +71,25 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    grid-area: body;
+}
+
+.square .rule {
+    grid-area: body;
+    opacity: 1;
+    cursor:default;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .square .reference {
-    align-self: end;
     margin-top: 1.3em;
-    color: #AAA
+    color: #AAA;
+    align-self: end;
+    grid-area: reference;
 }
 
 .free-square {
@@ -78,6 +104,10 @@ h1 {
 .square.marked .desc {
     opacity: 1;
     transition: all 1s .5s ease-in;
+}
+
+.square.marked .rule {
+    opacity: 0;
 }
 
 .square.marked .reference {
@@ -105,10 +135,26 @@ ul#options {
 }
 
 #options #filename {
-    text-decoration: unset;
-    margin-top: 5px;
-    color: #888
+	text-decoration: unset;
+	margin-top: 5px;
+	color: #888;
+	display: flex;
+	align-items: center;
 }
+
+
+#options #clear-storage {
+    margin: 0 5px 0 0;
+    font-size: .6em;
+    padding: 3px;
+    background: #555;
+    color: #DDD;
+    border-radius: 2px;
+    aspect-ratio: 1 /1;
+    width: 1em;
+    font-family: 'josefin sans';
+    font-weight: bold;
+  }
 
 
 

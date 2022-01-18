@@ -16,12 +16,23 @@ if(localStorage.length){
 function showImportedFileName() {
     if(localStorage.getItem('imported-file-name') != null){
         const msg = 'Loaded: ' + localStorage.getItem('imported-file-name');
+        const options = document.getElementById('options');
         if(document.getElementById('filename')){
             document.getElementById('filename').textContent = msg;
         } else {
+            const btn = Object.assign(document.createElement('span'), {id: 'clear-storage'});
+            btn.addEventListener('click', ()=>{
+                localStorage.clear();
+                filename.remove();
+                newCard();
+
+            });
+            btn.textContent = 'X';
             const filename = Object.assign(document.createElement('li'), {id: 'filename'});
             filename.textContent = msg;
-            document.getElementById('options').append(filename);
+            options.append(filename);
+
+            filename.insertBefore(btn, filename.childNodes[0]);
         }
     }
 }
