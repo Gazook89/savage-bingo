@@ -324,13 +324,6 @@ const defaultSquares = [
         "page" : 104
     },
     {
-        "name" : "Push for the Kill",
-        "type" : "combat",
-        "desc" : "",
-        "book" : "SWADE Core",
-        "page" : 104
-    },
-    {
         "name" : "Point Blank",
         "type" : "combat",
         "desc" : "",
@@ -338,14 +331,14 @@ const defaultSquares = [
         "page" : 104
     },
     {
-        "name" : "Ready Weapon",
+        "name" : "Ready Weapon as an Action",
         "type" : "combat",
         "desc" : "",
         "book" : "SWADE Core",
         "page" : 105
     },
     {
-        "name" : "Reload",
+        "name" : "Reload as an Action",
         "type" : "combat",
         "desc" : "",
         "book" : "SWADE Core",
@@ -364,6 +357,83 @@ const defaultSquares = [
         "desc" : "",
         "book" : "SWADE Core",
         "page" : 106
+    }, 
+    {
+        "name" : "Stun",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 106
+    },
+    {
+        "name" : "Support",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 106
+    },
+    {
+        "name" : "Suppressive Fire",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 107
+    },
+    {
+        "name" : "Surprise",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 108
+    },
+    {
+        "name" : "Test",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 108
+    },
+    {
+        "name" : "Touch Attack",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 108
+    },
+    {
+        "name" : "Two Weapons",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 108
+    },
+    {
+        "name" : "Unarmed Defender",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 109
+    },
+    {
+        "name" : "Unstable Platform",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 109
+    },
+    {
+        "name" : "Wild Attack",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 109
+    },
+    {
+        "name" : "Withdraw From Melee",
+        "type" : "combat",
+        "desc" : "",
+        "book" : "SWADE Core",
+        "page" : 109
     }
 ];
 
