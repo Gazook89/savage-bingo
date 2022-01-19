@@ -119,12 +119,16 @@ ul#options {
     padding:0;
     list-style: none;
     display: flex;
-    flex-direction: column;
-    align-items: center
-
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 50%;
+    margin: 0 auto;
 }
 
 #options li, #options label {
+    display: block;
+    flex: 1 0 100%;
     cursor : pointer;
     width: auto;
     text-decoration : underline;
@@ -186,4 +190,34 @@ footer a, footer a:visited {
 footer ul li label {
     text-decoration: underline;
     cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+    ul#options {
+        font-size: 40px;
+    }
+
+    #options li, #options label {
+        background: #444;
+        margin: 4px 
+    }
+
+    .square {
+        aspect-ratio: 1 / 1;
+    }
+
+    .square h1 {
+        font-size: 1.8em;
+        grid-area: body;
+        align-self: center;
+        text-decoration: none;
+    }
+
+    .square .rule {
+        display: none;
+    }
+
+    .square.marked .desc {
+        display: none;
+    }
 }
