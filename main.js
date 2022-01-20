@@ -15,24 +15,25 @@ if(localStorage.length){
 
 function showImportedFileName() {
     if(localStorage.getItem('imported-file-name') != null){
-        const msg = 'Loaded: ' + localStorage.getItem('imported-file-name');
+        const filename = localStorage.getItem('imported-file-name');
+        const msg = 'Loaded: ' + filename;
         const options = document.getElementById('options');
         if(document.getElementById('filename')){
             document.getElementById('filename').textContent = msg;
         } else {
-            const btn = Object.assign(document.createElement('span'), {id: 'clear-storage'});
+            const btn = Object.assign(document.createElement('span'), {id: `clear-${filename.slice(0,-5)}`, className: 'clear-file'});
             btn.addEventListener('click', ()=>{
                 localStorage.clear();
-                filename.remove();
+                fileLabel.remove();
                 newCard();
 
             });
             btn.textContent = 'X';
-            const filename = Object.assign(document.createElement('li'), {id: 'filename'});
-            filename.textContent = msg;
-            options.append(filename);
+            const fileLabel = Object.assign(document.createElement('li'), {id: 'filename'});
+            fileLabel.textContent = msg;
+            options.append(fileLabel);
 
-            filename.insertBefore(btn, filename.childNodes[0]);
+            fileLabel.insertBefore(btn, fileLabel.childNodes[0]);
         }
     }
 }
