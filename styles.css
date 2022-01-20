@@ -144,6 +144,7 @@ ul#options {
 	color: #888;
 	display: flex;
 	align-items: center;
+    justify-content: center;
 }
 
 
@@ -170,6 +171,7 @@ footer {
     margin-top: 4em;
     padding-bottom:2em;
     width:100vw;
+	font-size: 10px;
 }
 
 footer ul {
@@ -178,7 +180,6 @@ footer ul {
 	list-style: none;
 	gap: 30px;
 	font-family: 'helvetica';
-	font-size: 10px;
 	flex-wrap: wrap;
 	padding: 0 15px;
 }
@@ -193,24 +194,41 @@ footer ul li label {
 }
 
 @media screen and (max-width: 1000px) {
-    ul#options {
-        font-size: 40px;
+    body {
+        font-size: 20px;
+    }
+    
+    h1 {
+        font-size: 3em;
     }
 
-    #options li, #options label {
+
+
+    ul#options {
+        font-size: 2em;
+        width: 100%;
+        margin: 0 8px;
+    }
+
+    #options li {
         background: #444;
-        margin: 4px 
+        margin: 4px ;
     }
 
     .square {
         aspect-ratio: 1 / 1;
+        font-size: 16px;
     }
 
     .square h1 {
-        font-size: 1.8em;
+        font-size: 1.4em;
         grid-area: body;
         align-self: center;
         text-decoration: none;
+    }
+
+    .square .reference {
+        margin-top: 0;
     }
 
     .square .rule {
@@ -219,5 +237,9 @@ footer ul li label {
 
     .square.marked .desc {
         display: none;
+    }
+
+    footer {
+        font-size: 1em;
     }
 }
