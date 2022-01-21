@@ -125,7 +125,7 @@ ul#options {
     margin: 0 auto;
 }
 
-#options li, #options label {
+#options > li, #options > label {
     display: block;
     flex: 1 0 100%;
     cursor : pointer;
@@ -137,15 +137,32 @@ ul#options {
     text-decoration : none;
 }
 
-#options #filename {
+#options #file-list {
+	width: 100%;
+	background: #333;
+	padding: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 6px;
+	margin-top: 10px;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+#options .token {
 	text-decoration: unset;
-	margin-top: 5px;
+	margin-top: 0px;
 	color: #888;
 	display: flex;
 	align-items: center;
     justify-content: center;
-}
+    background-color: #222;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #888;
 
+}
 
 #options .clear-file {
     margin: 0 5px 0 0;
@@ -212,6 +229,15 @@ footer ul li label {
     #options li {
         background: #444;
         margin: 4px ;
+    }
+
+    #options #file-list {
+        padding: 20px
+    }
+
+    #options .token {
+        font-size: .5em;
+        margin-top: 8px
     }
 
     .square {

@@ -1,5 +1,6 @@
 import { newCard, loadCard, resetCard } from './newCard.js';
 import { importJSON } from './import.js';
+import { Token } from './token.js';
 
 document.getElementById('new').addEventListener('click', newCard);  // todo: this is returning "true" and thus looking for json.imported-bingo-card which doesnt exist.
 document.getElementById('reset').addEventListener('click', resetCard);
@@ -17,23 +18,25 @@ function showImportedFileName() {
     if(localStorage.getItem('imported-file-name') != null){
         const filename = localStorage.getItem('imported-file-name');
         const msg = 'Loaded: ' + filename;
-        const options = document.getElementById('options');
+        const fileList = document.getElementById('file-list');
         if(document.getElementById('filename')){
             document.getElementById('filename').textContent = msg;
         } else {
-            const btn = Object.assign(document.createElement('span'), {id: `clear-${filename.slice(0,-5)}`, className: 'clear-file'});
-            btn.addEventListener('click', ()=>{
-                localStorage.clear();
-                fileLabel.remove();
-                newCard();
+            // const fileToken = Object.assign(document.createElement('li'), {id: `${filename.slice(0,-5)}-token`, className: 'file-token'});
+            // const btn = Object.assign(document.createElement('span'), {id: `clear-${filename.slice(0,-5)}`, className: 'clear-file'});
+            // btn.addEventListener('click', ()=>{
+            //     localStorage.clear();
+            //     fileList.remove();
+            //     newCard();
 
-            });
-            btn.textContent = 'X';
-            const fileLabel = Object.assign(document.createElement('li'), {id: 'filename'});
-            fileLabel.textContent = msg;
-            options.append(fileLabel);
+            // });
+            // btn.textContent = 'X';
+            // const fileList = Object.assign(document.createElement('ul'), {id: 'filename'});
+            // fileList.textContent = msg;
 
-            fileLabel.insertBefore(btn, fileLabel.childNodes[0]);
+            const token = new Token(filename);
+            fileList.append(token.render());
+
         }
     }
 }
