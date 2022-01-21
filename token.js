@@ -6,6 +6,13 @@ export class Token {
         // this.container = container;
     }
 
+    removeFromFullSet(key){
+        const storage = JSON.parse(localStorage.getItem('full-set'));
+        console.log(storage);
+        delete storage[key];
+        localStorage.setItem('full-set', JSON.stringify(storage));
+    }
+
     render(){
         const fileNoExtension = this.id.slice(0, -5);
         const token = Object.assign(document.createElement('li'), {id: fileNoExtension, className: 'token'});
@@ -13,7 +20,7 @@ export class Token {
         const btn = Object.assign(document.createElement('span'), {id: `clear-${fileNoExtension}`, className: 'clear-file'});
         btn.textContent = 'X';
         btn.addEventListener('click', ()=>{
-            localStorage.clear();
+            this.removeFromFullSet(fileNoExtension);
             document.getElementById(fileNoExtension).remove();
             newCard();
         });

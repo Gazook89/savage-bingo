@@ -10,26 +10,27 @@ document.getElementById('import').addEventListener('click', importJSON);
 
 if(localStorage.length){
     loadCard();
-    showImportedFileName();
 } else {
     localStorage.setItem('full-set', JSON.stringify({"defaultSquares" : defaultSquares}));
     newCard();
 }
 
+showImportedFileName();
+
+
 function showImportedFileName() {
-    if(localStorage.getItem('imported-file-name') != null){
-        const filename = localStorage.getItem('imported-file-name');
-        const msg = 'Loaded: ' + filename;
         const fileList = document.getElementById('file-list');
-        if(document.getElementById('filename')){
-            document.getElementById('filename').textContent = msg;
-        } else {
-
-            const token = new Token(filename);
+        const filenames = Object.keys(JSON.parse(localStorage.getItem('full-set')));
+        filenames.forEach(file => {
+            if(document.getElementById(file)){ return };
+            const token = new Token(file + '.json');
             fileList.append(token.render());
+        })
+        
+        
+        
+        
 
-        }
-    }
 }
 
 

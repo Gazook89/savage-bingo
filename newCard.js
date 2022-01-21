@@ -65,8 +65,6 @@ export function newCard(){
     let availableSquares = concatFullSet() || defaultSquares;
     document.querySelector('#bingo-card').innerHTML = '';
 
-concatFullSet();
-
     for(let x=0;x<24;x++){
         const rand = Math.floor(Math.random()*availableSquares.length);
         const square = new Square(x, availableSquares[rand].name, availableSquares[rand].desc, availableSquares[rand].rule, availableSquares[rand].book, availableSquares[rand].page);
