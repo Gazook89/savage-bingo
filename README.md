@@ -16,7 +16,7 @@ To import squares, your JSON should have the structure below.  The `rules` prope
 
 ```json
 {
-    "rules" : [
+    "squares" : [
     {
         "name" : "Aim",
         "type" : "combat",
