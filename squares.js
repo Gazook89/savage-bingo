@@ -1,437 +1,437 @@
 const defaultSquares = [
     {
-        "name" : "Aim",
+        "heading" : "Aim",
         "type" : "combat",
-        "desc" : "\"I do not aim with my hand; he who aims with his hand has forgotten the face of his father.  I aim with my eye.\" <br> &mdash;Roland Deschain",
+        "back" : "\"I do not aim with my hand; he who aims with his hand has forgotten the face of his father.  I aim with my eye.\" <br> &mdash;Roland Deschain",
         "book" : "SWADE Core",
         "page" : 97
     },
     {
-        "name" : "Area of Effect",
+        "heading" : "Area of Effect",
         "type" : "combat",
-        "desc" : "quote needed",
+        "back" : "quote needed",
         "book" : "SWADE Core",
         "page" : 97
 
     },
     {
-        "name" : "Bound",
+        "heading" : "Bound",
         "type" : "combat",
-        "desc" : "\"I am bound to you.  Just as you are bound to me.  The question is, which of us is hungrier?\" &mdash;Gnoll captive",
+        "back" : "\"I am bound to you.  Just as you are bound to me.  The question is, which of us is hungrier?\" &mdash;Gnoll captive",
         "book" : "SWADE Core",
         "page" : 98
 
     },
     {
-        "name" : "Entangled",
+        "heading" : "Entangled",
         "type" : "combat",
-        "desc" : "\"God's damned it...I told that wretched elf to clean the webs out of the cellar.  <strong>GRINWILL, CUT ME OUT OF HERE!</strong>\" &mdash;Goblin tavernkeeper",
+        "back" : "\"God's damned it...I told that wretched elf to clean the webs out of the cellar.  <strong>GRINWILL, CUT ME OUT OF HERE!</strong>\" &mdash;Goblin tavernkeeper",
         "book" : "SWADE Core",
         "page" : 98
     },
     {
-        "name" : "Break Things",
+        "heading" : "Break Things",
         "type" : "combat",
-        "desc" : "\"If you’re angry and you know it, break things.\" &mdash;-. Fazzar, Omianna Trading Company",
+        "back" : "\"If you’re angry and you know it, break things.\" &mdash;-. Fazzar, Omianna Trading Company",
         "book" : "SWADE Core",
         "page" : 98
     },
     {
-        "name" : "Called Shot - Hand",
+        "heading" : "Called Shot - Hand",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Called Shot - Head",
+        "heading" : "Called Shot - Head",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Called Shot - Vitals",
+        "heading" : "Called Shot - Vitals",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Called Shot - Item",
+        "heading" : "Called Shot - Item",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Called Shot - Limb",
+        "heading" : "Called Shot - Limb",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Called Shot - Exposed Area",
+        "heading" : "Called Shot - Exposed Area",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Take Cover",
+        "heading" : "Take Cover",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Fire Through Obstacle",
+        "heading" : "Fire Through Obstacle",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 99
     },
     {
-        "name" : "Defend",
+        "heading" : "Defend",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Disarm",
+        "heading" : "Disarm",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Distracted",
+        "heading" : "Distracted",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Vulnerable",
+        "heading" : "Vulnerable",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "The Drop",
+        "heading" : "The Drop",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Knockout Blow",
+        "heading" : "Knockout Blow",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Evade",
+        "heading" : "Evade",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Fatigue",
+        "heading" : "Fatigue",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 100
     },
     {
-        "name" : "Finishing Move",
+        "heading" : "Finishing Move",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Fire into Melee",
+        "heading" : "Fire into Melee",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Free Attack",
+        "heading" : "Free Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Gang Up",
+        "heading" : "Gang Up",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Grapple",
+        "heading" : "Grapple",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Grapple a Size Up",
+        "heading" : "Grapple a Size Up",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Crush",
+        "heading" : "Crush",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 101
     },
     {
-        "name" : "Go on Hold",
+        "heading" : "Go on Hold",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Interrupt From Hold",
+        "heading" : "Interrupt From Hold",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Low Light",
+        "heading" : "Low Light",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Improvised Weapon - Light",
+        "heading" : "Improvised Weapon - Light",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Improvised Weapon - Medium",
+        "heading" : "Improvised Weapon - Medium",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Improvised Weapon - Heavy",
+        "heading" : "Improvised Weapon - Heavy",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Miss Innocent Bystanders",
+        "heading" : "Miss Innocent Bystanders",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 102
     },
     {
-        "name" : "Mounted Attack",
+        "heading" : "Mounted Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 103
     },
     {
-        "name" : "Mounted Charge",
+        "heading" : "Mounted Charge",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 103
     },
     {
-        "name" : "Set Pikes",
+        "heading" : "Set Pikes",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 103
     },
     {
-        "name" : "Multi-Action",
+        "heading" : "Multi-Action",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 103
     },
     {
-        "name" : "Natural Weapon - Bite",
+        "heading" : "Natural Weapon - Bite",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Natural Weapon - Claws",
+        "heading" : "Natural Weapon - Claws",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Natural Weapon - Horns",
+        "heading" : "Natural Weapon - Horns",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Nonlethal Attack",
+        "heading" : "Nonlethal Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Off-Hand Attack",
+        "heading" : "Off-Hand Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Go Prone",
+        "heading" : "Go Prone",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Push",
+        "heading" : "Push",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Point Blank",
+        "heading" : "Point Blank",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 104
     },
     {
-        "name" : "Ready Weapon as an Action",
+        "heading" : "Ready Weapon as an Action",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 105
     },
     {
-        "name" : "Reload as an Action",
+        "heading" : "Reload as an Action",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 105
     },
     {
-        "name" : "Attack Size Up",
+        "heading" : "Attack Size Up",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 106
     },
     {
-        "name" : "Attack Size Down",
+        "heading" : "Attack Size Down",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 106
     }, 
     {
-        "name" : "Stun",
+        "heading" : "Stun",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 106
     },
     {
-        "name" : "Support",
+        "heading" : "Support",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 106
     },
     {
-        "name" : "Suppressive Fire",
+        "heading" : "Suppressive Fire",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 107
     },
     {
-        "name" : "Surprise",
+        "heading" : "Surprise",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 108
     },
     {
-        "name" : "Test",
+        "heading" : "Test",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 108
     },
     {
-        "name" : "Touch Attack",
+        "heading" : "Touch Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 108
     },
     {
-        "name" : "Two Weapons",
+        "heading" : "Two Weapons",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 108
     },
     {
-        "name" : "Unarmed Defender",
+        "heading" : "Unarmed Defender",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 109
     },
     {
-        "name" : "Unstable Platform",
+        "heading" : "Unstable Platform",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 109
     },
     {
-        "name" : "Wild Attack",
+        "heading" : "Wild Attack",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 109
     },
     {
-        "name" : "Withdraw From Melee",
+        "heading" : "Withdraw From Melee",
         "type" : "combat",
-        "desc" : "",
+        "back" : "",
         "book" : "SWADE Core",
         "page" : 109
     }

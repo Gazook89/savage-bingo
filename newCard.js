@@ -1,11 +1,11 @@
 import defaultSquares from './squares.js'
 
 class Square {
-    constructor(uid, name, description, rule, book, page, marked){
+    constructor(uid, heading, back, front, book, page, marked){
         this.uid = uid;
-        this.name = name;
-        this.description = description;
-        this.rule = rule || undefined;
+        this.heading = heading;
+        this.back = back;
+        this.front = front || undefined;
         this.book = book;
         this.page = page;
         this.marked = marked
@@ -27,9 +27,9 @@ class Square {
     template(){
 
         return [
-            `<h1>${this.name}</h1>`,
-            `<div class='desc'>${this.description}</div>`,
-            this.rule != undefined ? `<div class='rule'>${this.rule}</div>` : null,
+            `<h1>${this.heading}</h1>`,
+            `<div class='desc'>${this.back}</div>`,
+            this.front != undefined ? `<div class='rule'>${this.front}</div>` : null,
             `<div class='reference'>${this.book} | ${this.page}</div>`
         ].join('\n')
     }
@@ -68,7 +68,7 @@ export function newCard(){
 
     for(let x=0;x<24;x++){
         const rand = Math.floor(Math.random()*availableSquares.length);
-        const square = new Square(x, availableSquares[rand].name, availableSquares[rand].desc, availableSquares[rand].rule, availableSquares[rand].book, availableSquares[rand].page);
+        const square = new Square(x, availableSquares[rand].heading, availableSquares[rand].back, availableSquares[rand].front, availableSquares[rand].book, availableSquares[rand].page);
         squareList.push(square);
         square.render();
     }
@@ -81,7 +81,7 @@ export function newCard(){
 export function loadCard() {
     let squares = JSON.parse(localStorage.getItem('sub-set'));
     for(let x=0;x<24;x++){
-            const square = new Square(x, squares[x].name, squares[x].description, squares[x].rule, squares[x].book, squares[x].page, squares[x].marked);   
+            const square = new Square(x, squares[x].heading, squares[x].back, squares[x].front, squares[x].book, squares[x].page, squares[x].marked);   
             square.render();
         };
     freeSquare();
