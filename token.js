@@ -1,3 +1,5 @@
+import { newCard } from './newCard.js';
+
 export class Token {
     constructor(file, container ){
         this.id = file;

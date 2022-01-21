@@ -1,4 +1,5 @@
 import { newCard, loadCard, resetCard } from './newCard.js';
+import defaultSquares from './squares.js'
 import { importJSON } from './import.js';
 import { Token } from './token.js';
 
@@ -11,6 +12,7 @@ if(localStorage.length){
     loadCard();
     showImportedFileName();
 } else {
+    localStorage.setItem('full-set', JSON.stringify({"defaultSquares" : defaultSquares}));
     newCard();
 }
 

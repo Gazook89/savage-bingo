@@ -49,13 +49,23 @@ function freeSquare() {
     document.querySelector('#bingo-card').append(freeSquare);
 };
 
+function concatFullSet(){
+    const storage = JSON.parse(localStorage.getItem('full-set'));
+    let arrayOfSets = [];
+    arrayOfSets = Object.keys(storage).map(key=> storage[key]);
+    arrayOfSets = arrayOfSets.flat();
+    return arrayOfSets;
+}
+
 export function newCard(){
     let squareList = [];
 
-    // if fullset
-    let availableSquares = JSON.parse(localStorage.getItem('full-set')) || defaultSquares;
+    // if fullset exists
+
+    let availableSquares = concatFullSet() || defaultSquares;
     document.querySelector('#bingo-card').innerHTML = '';
 
+concatFullSet();
 
     for(let x=0;x<24;x++){
         const rand = Math.floor(Math.random()*availableSquares.length);
