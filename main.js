@@ -22,17 +22,6 @@ function showImportedFileName() {
         if(document.getElementById('filename')){
             document.getElementById('filename').textContent = msg;
         } else {
-            // const fileToken = Object.assign(document.createElement('li'), {id: `${filename.slice(0,-5)}-token`, className: 'file-token'});
-            // const btn = Object.assign(document.createElement('span'), {id: `clear-${filename.slice(0,-5)}`, className: 'clear-file'});
-            // btn.addEventListener('click', ()=>{
-            //     localStorage.clear();
-            //     fileList.remove();
-            //     newCard();
-
-            // });
-            // btn.textContent = 'X';
-            // const fileList = Object.assign(document.createElement('ul'), {id: 'filename'});
-            // fileList.textContent = msg;
 
             const token = new Token(filename);
             fileList.append(token.render());
