@@ -17,9 +17,9 @@
             <ul id='options'>
                 <li id='new'>New</li>
                 <li id='reset'>Reset</li>
-                <li><label>Import JSON<input type='file' id='import' accept='.json'  style='display:none;' /></label></li>
+                <li><label>Import JSON<input type='file' class='import' accept='.json'  style='display:none;' /></label></li>
                 <ul id='file-list'>
-                    
+                    <li id='no-files-msg' class='hidden'>There are no square sets loaded.  Would you like to <label class='faux token'>import some<input type='file' class='import' accept='.json'  style='display:none;' /></label>, or use the <span id='add-defaults' class='import faux token'>default squares</span>?</li>
                 </ul>
             </ul>
             <div id='bingo-card'>

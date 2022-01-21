@@ -125,7 +125,7 @@ ul#options {
     margin: 0 auto;
 }
 
-#options > li, #options > label {
+#options > li, #options > li > label {
     display: block;
     flex: 1 0 100%;
     cursor : pointer;
@@ -150,6 +150,16 @@ ul#options {
     flex-wrap: wrap;
 }
 
+#options #file-list .hidden {
+    display:none;
+}
+
+#options #file-list li {
+    list-style: none;
+}
+
+
+
 #options .token {
 	text-decoration: unset;
 	margin-top: 0px;
@@ -161,7 +171,19 @@ ul#options {
     padding: 4px;
     border-radius: 5px;
     border: 1px solid #888;
+    cursor:default;
 
+}
+
+#options .faux.token {
+    display: inline;
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+#options .faux.token:hover {
+    border-color: rgb(252, 165, 52);
+    color: rgb(252, 165, 52)
 }
 
 #options .clear-file {
@@ -175,6 +197,7 @@ ul#options {
     width: 1em;
     font-family: 'josefin sans';
     font-weight: bold;
+    cursor: pointer;
   }
 
 

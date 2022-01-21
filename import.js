@@ -1,10 +1,17 @@
+import defaultSquares from "./squares.js";
+
 export function importJSON(evt) {
+    if(evt.target.id == 'add-defaults'){
+        const fullSet = {defaultSquares: defaultSquares};
+        localStorage.setItem('full-set', JSON.stringify(fullSet));
+        return;
+    }
     let jsonFile = evt.target.files[0];
     let reader = new FileReader();
     reader.readAsText(jsonFile);
     reader.onload = function() {
         const arr = JSON.parse(reader.result).squares;  //  get the array from the imported JSON
-        const fullSet = localStorage.getItem('full-set') ? JSON.parse(localStorage.getItem('full-set')) : {};  // if a full-set already exists, open it up...if not, create empty object
+        const fullSet = localStorage.getItem('full-set') ? JSON.parse(localStorage.getItem('full-set')) : null;  // if a full-set already exists, open it up...if not, create empty object
         fullSet[jsonFile.name.slice(0,-5)] = arr;  //  with the existing or new full-set object, set/create a "key" = the file name, and "value" to the imported array.
         localStorage.setItem('full-set', JSON.stringify(fullSet));  //  Then dump the adjusted/new object into localStorage again, as an OBJECT containing a list of key/values of imported arrays.
     };

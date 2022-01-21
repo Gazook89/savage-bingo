@@ -6,9 +6,9 @@ export class Token {
         // this.container = container;
     }
 
+
     removeFromFullSet(key){
         const storage = JSON.parse(localStorage.getItem('full-set'));
-        console.log(storage);
         delete storage[key];
         localStorage.setItem('full-set', JSON.stringify(storage));
     }
@@ -22,7 +22,6 @@ export class Token {
         btn.addEventListener('click', ()=>{
             this.removeFromFullSet(fileNoExtension);
             document.getElementById(fileNoExtension).remove();
-            newCard();
         });
         // this.container.append(token);
         token.insertBefore(btn, token.childNodes[0]);

@@ -63,6 +63,7 @@ export function newCard(){
     // if fullset exists
 
     let availableSquares = concatFullSet() || defaultSquares;
+    if(availableSquares.length == 0){ console.log('No square sets to pull from'); return; }
     document.querySelector('#bingo-card').innerHTML = '';
 
     for(let x=0;x<24;x++){
