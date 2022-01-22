@@ -2,7 +2,7 @@
 Add some variety to your Savage World combat with a Bingo meta game.  If your combat encounters are routinely just Fighting and Spellcasting rolls, use Savage Bingo to suggest alternative game mechanics you may not have considered.  Each bingo card has 24 rules on it with 1 free square at the center.  When you have used a mechanic, or somehow been a part of such mechanic, click on the square to mark it.  If you are a GM and one of your players gets a bingo (filling a row, column, or diagonal), award them with an extra benny or two or something else.  Likely there will be some squares where the criterion for whether it can be marked or not needs some interpretation by player and GM.
 
 ## Operation
-On first load, a random bingo card (set of 25 squares) will be generated from a longer list of possible squares.  On each subsequent reload of the page, the previous card will be reloaded (*though currently the marked status of squares is not kept*). 
+On first load, a random bingo card (set of 25 squares) will be generated from a longer list of possible squares.  On each subsequent reload of the page, the previous card will be reloaded. 
 
 Click **New** to generate a new set of 25 squares.
 
@@ -10,7 +10,7 @@ Click **New** to generate a new set of 25 squares.
 
 Clicking a card will mark it, and reveal some flavor text.  Cards can be unmarked as well.
 
-**Import JSON** allows you to upload your own JSON file with your own custom squares to use.  The information from the JSON will be saved in the browser localStorage until you either click the `x` next to the filename or you clear your browser storage (generally done if clearing cookies etc).  JSON files can of course be shared with others, too, so you and your party have a matching set (though every card will be different).
+**Import JSON** allows you to upload your own JSON file with your own custom squares to use.  The information from the JSON will be saved in the browser localStorage until you either click the `x` next to the filename or you clear your browser storage (generally done if clearing cookies etc).  The squares from each JSON are *appended* to any other JSON files currently imported.  JSON files can of course be shared with others, too, so you and your party have a matching set (though every card will be different).
 
 To import squares, your JSON should have the structure below.  The `front` property is text that will appear in the body of the square before it is 'marked', and is omitted in the default squares.  The `back` property contains text that appears only after a square is marked.  
 
