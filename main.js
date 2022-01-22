@@ -14,11 +14,13 @@ Array.from(document.getElementsByClassName('import')).forEach(el=>{
 [newCard, showFileName].forEach(func=>{Array.from(document.getElementsByClassName('import')).forEach(el=>el.addEventListener('change', func))}) ;
 document.getElementById('clear-storage-link').onclick = ()=>{
     if(localStorage.length){
-        localStorage.clear();
+        clearLocalStorage('sb-');
         console.log('storage cleared.');
     }
     return false;
 };
+
+
 
 
 if(localStorage.length){
@@ -45,6 +47,10 @@ function showFileName() {
             const token = new Token(file + '.json');
             fileList.append(token.render());
         })
+}
+
+function clearLocalStorage(prefix){
+    Object.keys(localStorage).filter(x => x.startsWith(prefix)).forEach(x => localStorage.removeItem(x))
 }
 
 let fileListObserver = new MutationObserver(mutations => {
