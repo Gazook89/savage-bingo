@@ -12,7 +12,13 @@ Array.from(document.getElementsByClassName('import')).forEach(el=>{
     }
 });
 [newCard, showFileName].forEach(func=>{Array.from(document.getElementsByClassName('import')).forEach(el=>el.addEventListener('change', func))}) ;
-
+document.getElementById('clear-storage-link').onclick = ()=>{
+    if(localStorage.length){
+        localStorage.clear();
+        console.log('storage cleared.');
+    }
+    return false;
+};
 
 
 if(localStorage.length){
