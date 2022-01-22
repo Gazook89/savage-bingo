@@ -7,7 +7,6 @@ document.getElementById('new').addEventListener('click', newCard);
 document.getElementById('reset').addEventListener('click', resetCard);
 Array.from(document.getElementsByClassName('import')).forEach(el=>{
     el.addEventListener('click', importJSON);
-    console.log(el.id);
     if(el.id == 'add-defaults'){
         el.addEventListener('click', showFileName)
     }
@@ -22,7 +21,6 @@ if(localStorage.length){
         document.getElementById('no-files-msg').classList.add('hidden');
         showFileName();
     } else {
-        console.log('false');
         document.getElementById('no-files-msg').classList.remove('hidden');
     }
 } else {
