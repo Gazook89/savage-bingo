@@ -13,7 +13,7 @@ Array.from(document.getElementsByClassName('import')).forEach(el=>{
 });
 [newCard, showFileName].forEach(func=>{Array.from(document.getElementsByClassName('import')).forEach(el=>el.addEventListener('change', func))}) ;
 document.getElementById('clear-storage-link').onclick = ()=>{
-    if(Object.keys(localStorage).filter(x => x.startsWith(prefix)).length){
+    if(Object.keys(localStorage).filter(x => x.startsWith('sb-')).length){
         clearLocalStorage('sb-');
         console.log('storage cleared.');
     }
@@ -23,7 +23,7 @@ document.getElementById('clear-storage-link').onclick = ()=>{
 
 
 
-if(Object.keys(localStorage).filter(x => x.startsWith(prefix)).length){
+if(Object.keys(localStorage).filter(x => x.startsWith('sb-')).length){
     loadCard();
     if(Object.keys(JSON.parse(localStorage.getItem('sb-full-set'))).length > 0){
         document.getElementById('no-files-msg').classList.add('hidden');
