@@ -13,7 +13,7 @@ class Square {
     
     mark(evt){
         evt.currentTarget.classList.toggle('marked');
-        const arr = JSON.parse(localStorage.getItem('sub-set'));
+        const arr = JSON.parse(localStorage.getItem('sb-sub-set'));
 
         arr.forEach(item => {
             if(item.uid == parseInt(evt.currentTarget.id)){
@@ -21,7 +21,7 @@ class Square {
                 item.marked =  !stat;
             }
         })
-        localStorage.setItem('sub-set', JSON.stringify(arr))
+        localStorage.setItem('sb-sub-set', JSON.stringify(arr))
     }
 
     template(){
@@ -50,7 +50,7 @@ function freeSquare() {
 };
 
 function concatFullSet(){
-    const storage = JSON.parse(localStorage.getItem('full-set'));
+    const storage = JSON.parse(localStorage.getItem('sb-full-set'));
     let arrayOfSets = [];
     arrayOfSets = Object.keys(storage).map(key=> storage[key]);
     arrayOfSets = arrayOfSets.flat();
@@ -75,11 +75,11 @@ export function newCard(){
 
     freeSquare();
 
-    localStorage.setItem('sub-set', JSON.stringify(squareList));
+    localStorage.setItem('sb-sub-set', JSON.stringify(squareList));
 };
 
 export function loadCard() {
-    let squares = JSON.parse(localStorage.getItem('sub-set'));
+    let squares = JSON.parse(localStorage.getItem('sb-sub-set'));
     for(let x=0;x<24;x++){
             const square = new Square(x, squares[x].heading, squares[x].back, squares[x].front, squares[x].book, squares[x].page, squares[x].marked);   
             square.render();

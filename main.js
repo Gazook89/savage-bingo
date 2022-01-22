@@ -23,14 +23,14 @@ document.getElementById('clear-storage-link').onclick = ()=>{
 
 if(localStorage.length){
     loadCard();
-    if(Object.keys(JSON.parse(localStorage.getItem('full-set'))).length > 0){
+    if(Object.keys(JSON.parse(localStorage.getItem('sb-full-set'))).length > 0){
         document.getElementById('no-files-msg').classList.add('hidden');
         showFileName();
     } else {
         document.getElementById('no-files-msg').classList.remove('hidden');
     }
 } else {
-    localStorage.setItem('full-set', JSON.stringify({"defaultSquares" : defaultSquares}));
+    localStorage.setItem('sb-full-set', JSON.stringify({"defaultSquares" : defaultSquares}));
     newCard();
 }
 
@@ -39,7 +39,7 @@ showFileName();
 
 function showFileName() {
         const fileList = document.getElementById('file-list');
-        const filenames = Object.keys(JSON.parse(localStorage.getItem('full-set')));
+        const filenames = Object.keys(JSON.parse(localStorage.getItem('sb-full-set')));
         filenames.forEach(file => {
             if(document.getElementById(file)){ return };
             const token = new Token(file + '.json');

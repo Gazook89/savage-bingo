@@ -8,9 +8,9 @@ export class Token {
 
 
     removeFromFullSet(key){
-        const storage = JSON.parse(localStorage.getItem('full-set'));
+        const storage = JSON.parse(localStorage.getItem('sb-full-set'));
         delete storage[key];
-        localStorage.setItem('full-set', JSON.stringify(storage));
+        localStorage.setItem('sb-full-set', JSON.stringify(storage));
     }
 
     render(){
