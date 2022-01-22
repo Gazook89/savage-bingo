@@ -176,7 +176,7 @@ ul#options {
 }
 
 #options .faux.token {
-    display: inline;
+    display: inline-block;
     margin-right: 2px;
     cursor: pointer;
 }
