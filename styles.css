@@ -46,6 +46,8 @@ h1 {
     justify-content: center; 
     justify-items: center; 
     align-items: center; 
+    position: relative;
+    aspect-ratio: 1 / 1;
 }
   
 
@@ -58,6 +60,39 @@ h1 {
     font-size: 1.2em;  
     align-self: start;
     grid-area: header;
+}
+
+.info-button {
+	position: absolute;
+	bottom: 10px;
+	z-index: 300;
+	right: 10px;
+	font-size: 1.3em;
+	color: rgb(252, 165, 52);
+	border: 1px solid rgb(252, 165, 52);
+	width: 1em;
+	border-radius: 25%;
+	height: 1em;
+	font-weight: 300;
+	opacity: .4;
+    transition:all .3s linear;
+    cursor:pointer;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.info-button:hover {
+    opacity: 1;
+    transition:all .3s linear;
+}
+
+.square.show-info .info-button {
+    border-color: #555;
+    color: #555;
+    background-color: rgb(252,165,52);
 }
 
 .square .desc {
@@ -73,7 +108,7 @@ h1 {
     grid-area: body;
 }
 
-.square .rule {
+.square .subheading {
     grid-area: body;
     opacity: 1;
     cursor:default;
@@ -82,6 +117,20 @@ h1 {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    opacity: 1;
+    transition: all .6s linear;
+}
+
+.square .tooltip {
+    grid-area: body;
+    cursor:default;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    opacity: 0;
+    transition: all .6s linear;
 }
 
 .square .reference {
@@ -89,6 +138,8 @@ h1 {
     color: #AAA;
     align-self: end;
     grid-area: reference;
+    opacity: 0;
+    transition: all .6s linear;
 }
 
 .free-square {
@@ -105,12 +156,32 @@ h1 {
     transition: all 1s .5s ease-in;
 }
 
-.square.marked .rule {
+.square.marked .subheading {
     opacity: 0;
 }
 
 .square.marked .reference {
     visibility: hidden;
+}
+
+.square.show-info .tooltip, .square.show-info .reference {
+    opacity: 1;
+    transition: all .6s linear;
+}
+
+.square.show-info .subheading {
+    opacity: 0;
+    transition: all .6s linear;
+}
+
+.square.marked.show-info .desc {
+    opacity: 0;
+    transition: all .6s linear;
+}
+
+.square.marked .info-button {
+    border-color: #555;
+    color: #555
 }
 
 /* options */
@@ -279,7 +350,7 @@ footer ul li label {
         margin-top: 0;
     }
 
-    .square .rule {
+    .square .subheading {
         display: none;
     }
 

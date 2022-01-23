@@ -1,18 +1,21 @@
 import defaultSquares from './squares.js'
 
 class Square {
-    constructor(uid, heading, back, front, book, page, marked){
+    constructor(uid, heading, subheading, back, tooltip, book, page, url, marked){
         this.uid = uid;
         this.heading = heading;
+        this.subheading = subheading;
         this.back = back;
-        this.front = front || undefined;
+        this.tooltip = tooltip || undefined;
         this.book = book;
         this.page = page;
+        this.url = url;
         this.marked = marked
     }
     
     mark(evt){
         evt.currentTarget.classList.toggle('marked');
+        evt.currentTarget.classList.remove('show-info');
         const arr = JSON.parse(localStorage.getItem('sb-sub-set'));
 
         arr.forEach(item => {
@@ -21,15 +24,23 @@ class Square {
                 item.marked =  !stat;
             }
         })
-        localStorage.setItem('sb-sub-set', JSON.stringify(arr))
+        localStorage.setItem('sb-sub-set', JSON.stringify(arr));
+    }
+
+    showInfo(evt){
+        evt.stopPropagation();
+        const square = evt.currentTarget.closest('.square');
+        square.classList.toggle('show-info');
     }
 
     template(){
 
         return [
+            `<div class='info-button'>i</div>`,
             `<h1>${this.heading}</h1>`,
             `<div class='desc'>${this.back}</div>`,
-            this.front != undefined ? `<div class='rule'>${this.front}</div>` : null,
+            this.subheading != undefined ? `<div class='subheading'>${this.subheading}</div>` : null,
+            this.tooltip != undefined ? `<div class='tooltip'>${this.tooltip}</div>` : null,
             `<div class='reference'>${this.book} | ${this.page}</div>`
         ].join('\n')
     }
@@ -38,7 +49,8 @@ class Square {
         const marked = this.marked == true ? ' marked' : '';
         const newSquare = Object.assign(document.createElement('div'), {id: this.uid, className: `square ${marked}`});
         newSquare.innerHTML = this.template();
-        newSquare.addEventListener('click', this.mark);
+        newSquare.addEventListener('click', this.mark, false);
+        newSquare.querySelector('.info-button').addEventListener('click', this.showInfo, false);
         document.querySelector('#bingo-card').append(newSquare);
     }
 }
@@ -68,7 +80,7 @@ export function newCard(){
 
     for(let x=0;x<24;x++){
         const rand = Math.floor(Math.random()*availableSquares.length);
-        const square = new Square(x, availableSquares[rand].heading, availableSquares[rand].back, availableSquares[rand].front, availableSquares[rand].book, availableSquares[rand].page);
+        const square = new Square(x, availableSquares[rand].heading, availableSquares[rand].subheading, availableSquares[rand].back, availableSquares[rand].tooltip, availableSquares[rand].book, availableSquares[rand].page, availableSquares[rand].url);
         squareList.push(square);
         square.render();
     }
@@ -81,7 +93,7 @@ export function newCard(){
 export function loadCard() {
     let squares = JSON.parse(localStorage.getItem('sb-sub-set'));
     for(let x=0;x<24;x++){
-            const square = new Square(x, squares[x].heading, squares[x].back, squares[x].front, squares[x].book, squares[x].page, squares[x].marked);   
+            const square = new Square(x, squares[x].heading, squares[x].subheading, squares[x].back, squares[x].tooltip, squares[x].book, squares[x].page, squares[x].marked);   
             square.render();
         };
     freeSquare();
