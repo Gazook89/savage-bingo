@@ -1,3 +1,6 @@
+<img width="1233" alt="image" src="https://user-images.githubusercontent.com/58999374/150661710-79f0324f-89e9-4f9e-8d8f-92077a63e2e8.png">
+
+
 # Savage Bingo
 Add some variety to your Savage World combat with a Bingo meta game.  If your combat encounters are routinely just Fighting and Spellcasting rolls, use Savage Bingo to suggest alternative game mechanics you may not have considered.  Each bingo card has 24 rules on it with 1 free square at the center.  When you have used a mechanic, or somehow been a part of such mechanic, click on the square to mark it.  If you are a GM and one of your players gets a bingo (filling a row, column, or diagonal), award them with an extra benny or two or something else.  Likely there will be some squares where the criterion for whether it can be marked or not needs some interpretation by player and GM.
 
